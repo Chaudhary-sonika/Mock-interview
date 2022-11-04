@@ -3,10 +3,15 @@ var btnInc = document.querySelector("#btn-inc");
 var btnDec = document.querySelector("#btn-dec");
 var outputBox = document.querySelector("#output-box");
 
-var textSize = "";
+var textSize = 16;
 function incFont() {
-inputText.style.fontSize = textSize + 2 +"px";
+    textSize += 2;
+inputText.style.fontSize = textSize +"px";
+};
+function decFont() {
+    textSize -= 2;
+    inputText.style.fontSize = textSize + "px";
 };
 
-btnInc.addEventListener("click", incFont());
-btnDec.addEventListener("click", );
+btnInc.addEventListener("click", incFont);
+btnDec.addEventListener("click", decFont);
